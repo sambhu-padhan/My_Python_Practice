@@ -4,12 +4,10 @@
 # take_Body_Ex exrcise     = in every 2 minutes (you can change it)
 # You can change the timing
 # I have used a common song for alarm
-#
 
 import time
 import datetime
 dateandtime = datetime.datetime.now()
-local_time = time.asctime(time.localtime(time.time()))
 from pygame import mixer
 mixer.init()
 mixer.music.load("song.mp3")
@@ -19,6 +17,7 @@ mixer.music.set_volume(0.7)
 def takeWater() :
     mixer.music.play()
     start = int(time.time())
+    local_time = time.asctime(time.localtime(time.time()))
     print("please take few minutes of eye Exercise and")
     print(f"plelase take 250 ml of water \t\t\t\t\t\t{local_time}")
     print("Please press any key for confirmation :",end = " ")
@@ -34,6 +33,7 @@ def takeWater() :
 def bodyExercise() :
     mixer.music.play()
     start = int(time.time())
+    local_time = time.asctime(time.localtime(time.time()))
     print(f"plelase complete your Body Exercise  \t\t\t\t\t\t{local_time}")
     print("Please press any key for confirmation :",end = " ")
     inp = input()
@@ -47,6 +47,7 @@ def bodyExercise() :
 #........................My program start here.............................#
 
 print("\n\t\t\t\t.....Health Program For You.....\n")
+local_time = time.asctime(time.localtime(time.time()))
 print(local_time)
 
 BodyExerciseTiming = 120    # fix your (take_Body_Ex exrcise) timting here in seconds
